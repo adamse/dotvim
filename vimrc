@@ -32,7 +32,8 @@ set fillchars=""
 syntax on
 
 " Colorscheme
-colorscheme Tomorrow-Night-Bright
+set background=dark
+colorscheme solarized
 
 " Get that filetype stuff happening
 filetype on
