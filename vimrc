@@ -1,6 +1,4 @@
-" ==============
-" Basic settings {{{
-" ==============
+" Basic settings
 
 " Allow pathogen to be a bundle
 runtime bundle/vim-pathogen/autoload/pathogen.vim
@@ -10,7 +8,7 @@ execute pathogen#infect()
 
 set nocompatible
 
-" Show relativenumber
+" Show linenumbers
 set number
 
 " Allow hidden buffers
@@ -23,10 +21,7 @@ set lazyredraw
 set fillchars=""
 
 
-" }}}
-" -------
-" Editing {{{
-" -------
+" Editing
 
 " Syntax highlight on
 syntax on
@@ -46,9 +41,6 @@ autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
 " 'c' commands place an $ at end of text
 set cpoptions=Bces$
 
-" allow backspace to erase previously entered text
-set backspace=indent,eol,start
-
 " Cursor can enter invalid positions
 set virtualedit=block,onemore
 
@@ -63,12 +55,8 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 
-" Autoindent!
-set autoindent
-
 " Enable search highlighting and incrementally match
 set hlsearch
-set incsearch
 
 " Ignore case when matching
 set ignorecase
@@ -83,9 +71,6 @@ set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 " Share clipboard with osx
 "set clipboard=unnamed
 
-" Sane zencoding shortcut
-let g:user_zen_expandabbr_key = '<c-e>'
-
 " Default to global replace
 set gdefault
 
@@ -96,19 +81,10 @@ autocmd QuickFixCmdPost *grep* cwindow
 set wildignore=.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pdf,*.bak,*.beam,*.hi,*.aux
 
 
-" }}}
-" ---------
-" Statusbar {{{
-" ---------
+" Statusbar
 
 " Keep some stuff in the history
 set history=100
-
-" Show the current command in the lower right corner
-set showcmd
-
-" Always show statusbar
-set laststatus=2
 
 " Command line 2 high
 set cmdheight=2
@@ -116,9 +92,6 @@ set cmdheight=2
 set ruler
 
 set showmode
-
-" Nice command completion
-set wildmenu
 
 set statusline=%f\          " Path to file
 set stl+=%y\                " filetype
@@ -129,31 +102,8 @@ set stl+=Col:%c\   				  " column info
 set stl+=Buf:%n\            " buffer number
 set stl+=[%b][0x%B]         " char code
 
-" }}}
-" ---
-" GUI {{{
-" ---
 
-" Font
-set guifont=Monaco:h12
-set noantialias
-
-" No toolbars, no tabbar
-set guioptions=ac
-
-" Set up the gui cursor to look nice
-set guicursor=n-v-c:block-Cursor-blinkon0
-set guicursor+=ve:ver35-Cursor
-set guicursor+=o:hor50-Cursor
-set guicursor+=i-ci:ver25-Cursor
-set guicursor+=r-cr:hor20-Cursor
-set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
-
-
-" }}}
-" ----------
 " Keymapping {{{
-" ----------
 
 let mapleader = ","
 let maplocalleader = "+"
@@ -188,46 +138,14 @@ noremap L $
 noremap J G
 noremap K gg
 
-" Quote current word
-nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-
-" Surround selection with quotes
-vnoremap <leader>" <esc>a"<esc>gvo<esc>i"<esc>
-vnoremap <leader>' <esc>a'<esc>gvo<esc>i'<esc>
-
-" Edit in/around next/last ()
-onoremap in( :<C-u>normal! f(vi(<cr>
-onoremap il( :<C-u>normal! F)vi(<cr>
-onoremap an( :<C-u>normal! f(vi(loh<cr>
-onoremap al( :<C-u>normal! F(vi(loh<cr>
-
-" Edit in/around next/last []
-onoremap in[ :<C-u>normal! f[vi[<cr>
-onoremap il[ :<C-u>normal! F[vi[<cr>
-onoremap an[ :<C-u>normal! f[vi[loh<cr>
-onoremap al[ :<C-u>normal! F]vi[loh<cr>
-
-" Edit in/around next/last {}
-onoremap in{ :<C-u>normal! f{vi{<cr>
-onoremap il{ :<C-u>normal! F}vi{<cr>
-onoremap an{ :<C-u>normal! f{vi{loh<cr>
-onoremap al{ :<C-u>normal! F}vi{loh<cr>
-
 " Compile (make) a program
 nnoremap <C-m> :w<CR>:make %<CR>
 
 " Find todos in files
 command! Todos vimgrep TODO: **/*
 
-" åöä for special chars
-"set keymap=svenska
-"set langmap=ö[Ö{ä]Ä}å\\Å|
 
-" }}}
-" ----------
-" Plugins {{{
-" ----------
+" Plugins
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
