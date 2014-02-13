@@ -21,7 +21,7 @@ set lazyredraw
 set fillchars=""
 
 
-" Editing
+" EDITING
 
 " Syntax highlight on
 syntax on
@@ -79,6 +79,14 @@ autocmd QuickFixCmdPost *grep* cwindow
 
 " Ignore some files when autocompleting in Ex
 set wildignore=.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pdf,*.bak,*.beam,*.hi,*.aux
+
+" Set absolute and relative linenumbers in different modes
+if version >= 703
+  au FocusLost * :set number
+  au FocusGained * :set relativenumber
+  au InsertEnter * :set number
+  au InsertLeave * :set relativenumber
+endif
 
 
 " Statusbar
@@ -154,6 +162,10 @@ let NERDTreeSortOrder=['\/$', '\.java$', '*', '\.swp$', '\~$']
 let NERDTreeIgnore=['\.class', '\.fls', '\.aux', '\.pdf', '\.dvi', '\.fdb_latexmk', '\.pyc']
 
 nnoremap <leader>n :NERDTreeToggle<cr>
+
+" Haskellmode
+
+let g:haddock_browser="open"
 
 " Yes, strip trailing whitespace
 fun! <SID>StripTrailingWhitespaces()
