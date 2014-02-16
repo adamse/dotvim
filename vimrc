@@ -8,9 +8,6 @@ execute pathogen#infect()
 
 set nocompatible
 
-" Show linenumbers
-set number
-
 " Allow hidden buffers
 set hidden
 
@@ -80,12 +77,17 @@ autocmd QuickFixCmdPost *grep* cwindow
 " Ignore some files when autocompleting in Ex
 set wildignore=.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pdf,*.bak,*.beam,*.hi,*.aux
 
+" Show linenumbers
 " Set absolute and relative linenumbers in different modes
-if version >= 703
+if version >= 703 " vim >= 7.3 supports relative linenumbers
+  set relativenumber
+
   au FocusLost * :set number
   au FocusGained * :set relativenumber
   au InsertEnter * :set number
   au InsertLeave * :set relativenumber
+elseif
+  set number
 endif
 
 
