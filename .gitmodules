@@ -37,3 +37,15 @@
 [submodule "bundle/vim-scriptease"]
 	path = bundle/vim-scriptease
 	url = https://github.com/tpope/vim-scriptease.git
+[submodule "bundle/ghcmod-vim"]
+	path = bundle/ghcmod-vim
+	url = https://github.com/eagletmt/ghcmod-vim.git
+[submodule "bundle/vim2hs"]
+	path = bundle/vim2hs
+	url = https://github.com/dag/vim2hs.git
+[submodule "bundle/neco-ghc"]
+	path = bundle/neco-ghc
+	url = https://github.com/eagletmt/neco-ghc.git
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim.git
