@@ -24,7 +24,7 @@ set fillchars=""
 syntax on
 
 " Colorscheme
-set background=dark
+set background=dark " Solarized background
 colorscheme solarized
 
 " Get that filetype stuff happening
@@ -121,17 +121,11 @@ let maplocalleader = "+"
 nnoremap j gj
 nnoremap k gk
 
-inoremap kj <esc>
-
 " Move around windows
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
-
-" -/+ to move a line down/up
-nnoremap - ddp
-nnoremap _ ddkP
 
 " <C-u> to uppercase word under cursor
 "inoremap <C-u> <esc>viwUi
@@ -144,9 +138,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " Go to beginning/end of line
 noremap H 0
 noremap L $
-" Go to begging/end of file
-noremap J G
-noremap K gg
 
 " Compile (make) a program
 nnoremap <C-m> :w<CR>:make %<CR>
@@ -165,9 +156,6 @@ let NERDTreeIgnore=['\.class', '\.fls', '\.aux', '\.pdf', '\.dvi', '\.fdb_latexm
 
 nnoremap <leader>n :NERDTreeToggle<cr>
 
-" Haskellmode
-
-let g:haddock_browser="open"
 
 " Yes, strip trailing whitespace
 fun! <SID>StripTrailingWhitespaces()
