@@ -157,14 +157,4 @@ let NERDTreeIgnore=['\.class', '\.fls', '\.aux', '\.pdf', '\.dvi', '\.fdb_latexm
 nnoremap <leader>n :NERDTreeToggle<cr>
 
 
-" Yes, strip trailing whitespace
-fun! <SID>StripTrailingWhitespaces()
-  let l = line(".")
-  let c = col(".")
-  %s/\s\+$//e
-  call cursor(l, c)
-endfun
-
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
-
 set foldlevelstart=20
