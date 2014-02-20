@@ -32,6 +32,30 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" Normal stuff
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
+
+set nrformats-=octal
+
+set ttimeout
+set ttimeoutlen=50
+
+set incsearch
+
+" Use <C-L> to clear the highlighting of :set hlsearch.
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+
+set laststatus=2
+set ruler
+set showcmd
+set wildmenu
+
+set autoread
+set fileformats+=mac
+
 " Set the default filetype to text
 autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
 
@@ -148,6 +172,11 @@ command! Todos vimgrep TODO: **/*
 
 " Plugins
 
+" NeoComplete
+let g:neocomplete#enable_at_startup=1
+let g:neocomplete#disable_auto_complete=1
+
+
 " NERDTree
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowBookmarks=1
@@ -155,6 +184,5 @@ let NERDTreeSortOrder=['\/$', '\.java$', '*', '\.swp$', '\~$']
 let NERDTreeIgnore=['\.class', '\.fls', '\.aux', '\.pdf', '\.dvi', '\.fdb_latexmk', '\.pyc']
 
 nnoremap <leader>n :NERDTreeToggle<cr>
-
 
 set foldlevelstart=20
