@@ -45,8 +45,8 @@ set ttimeoutlen=50
 
 set incsearch
 
-" Use <C-L> to clear the highlighting of :set hlsearch.
-nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+" to clear the highlighting of :set hlsearch.
+nnoremap <C-i> :nohlsearch<CR>
 
 set laststatus=2
 set ruler
@@ -174,7 +174,8 @@ command! Todos vimgrep TODO: **/*
 
 " NeoComplete
 let g:neocomplete#enable_at_startup=1
-let g:neocomplete#disable_auto_complete=1
+"let g:neocomplete#disable_auto_complete=1
+"inoremap <expr><Tab> neocomplete#start_manual_complete()
 
 
 " NERDTree
