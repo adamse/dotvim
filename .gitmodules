@@ -46,9 +46,6 @@
 [submodule "bundle/vimproc.vim"]
 	path = bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
-[submodule "bunde/vim-misc"]
-	path = bunde/vim-misc
-	url = https://github.com/xolox/vim-misc.git
 [submodule "bundle/vim-easytags"]
 	path = bundle/vim-easytags
 	url = https://github.com/xolox/vim-easytags.git
