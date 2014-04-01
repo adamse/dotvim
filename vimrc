@@ -172,8 +172,19 @@ command! Todos vimgrep TODO: **/*
 
 " Plugins
 
+" EasyTags for haskell
+
+let g:easytags_languages = {
+\   'haskell': {
+\       'cmd': '/Users/adam/Library/Haskell/bin/hasktags',
+\       'args': ['-c'],
+\       'fileoutput_opt': '-f',
+\       'stdout_opt': '-f-'
+\   }
+\}
+
 " NeoComplete
-let g:neocomplete#enable_at_startup=1
+"let g:neocomplete#enable_at_startup=1
 "let g:neocomplete#disable_auto_complete=1
 "inoremap <expr><Tab> neocomplete#start_manual_complete()
 
