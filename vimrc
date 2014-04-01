@@ -32,6 +32,10 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" Allow per directory .vimrc
+set exrc
+set secure
+
 " Normal stuff
 set autoindent
 set backspace=indent,eol,start
