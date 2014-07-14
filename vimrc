@@ -199,6 +199,6 @@ let NERDTreeShowBookmarks=1
 let NERDTreeSortOrder=['\/$', '\.java$', '*', '\.swp$', '\~$']
 let NERDTreeIgnore=['\.class', '\.fls', '\.aux', '\.pdf', '\.dvi', '\.fdb_latexmk', '\.pyc']
 
-nnoremap <leader>n :NERDTreeToggle<cr>
+nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 
 set foldlevelstart=20
