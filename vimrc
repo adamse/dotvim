@@ -50,7 +50,7 @@ set ttimeoutlen=50
 set incsearch
 
 " to clear the highlighting of :set hlsearch.
-nnoremap <C-i> :nohlsearch<CR>
+nnoremap <silent> <C-i> :nohlsearch<CR>
 
 set laststatus=2
 set ruler
@@ -180,7 +180,7 @@ command! Todos vimgrep TODO: **/*
 
 let g:easytags_languages = {
 \   'haskell': {
-\       'cmd': '/Users/adam/Library/Haskell/bin/hasktags',
+\       'cmd': '/Users/adam/.cabal/bin/hasktags',
 \       'args': ['-c'],
 \       'fileoutput_opt': '-f',
 \       'stdout_opt': '-f-'
@@ -200,5 +200,6 @@ let NERDTreeSortOrder=['\/$', '\.java$', '*', '\.swp$', '\~$']
 let NERDTreeIgnore=['\.class', '\.fls', '\.aux', '\.pdf', '\.dvi', '\.fdb_latexmk', '\.pyc']
 
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+nnoremap <silent> <leader>b :NERDTreeFind<cr>
 
 set foldlevelstart=20
