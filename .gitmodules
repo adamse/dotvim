@@ -43,3 +43,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-hdevtools"]
+	path = bundle/vim-hdevtools
+	url = https://github.com/bitc/vim-hdevtools.git
