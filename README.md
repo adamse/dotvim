@@ -13,4 +13,19 @@
 
 # Upgrade bundles
 
+All bundles:
+
     git submodule foreach git pull origin master
+
+Some bundle:
+
+    cd bundle/<bundle>
+    git checkout master
+    git pull
+
+Commit changes
+
+# Remove bundle
+
+    git submodule deinit bundle/<bundle>
+    git rm bundle/<bundle>
