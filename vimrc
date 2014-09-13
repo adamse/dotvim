@@ -67,6 +67,9 @@ autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
 " Use pandoc to edit gitit .page files
 autocmd BufEnter *.page set ft=pandoc
 
+" .st is gitit templates
+autocmd BufEnter *.st set ft=html
+
 " 'c' commands place an $ at end of text
 set cpoptions=Bces$
 
