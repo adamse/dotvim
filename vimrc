@@ -5,6 +5,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 " Enable pathogen plugin handling
 execute pathogen#infect()
+call pathogen#helptags()
 
 set nocompatible
 
@@ -62,6 +63,9 @@ set fileformats+=mac
 
 " Set the default filetype to text
 autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
+
+" Use pandoc to edit gitit .page files
+autocmd BufEnter *.page set ft=pandoc
 
 " 'c' commands place an $ at end of text
 set cpoptions=Bces$
@@ -202,4 +206,12 @@ let NERDTreeIgnore=['\.class', '\.fls', '\.aux', '\.pdf', '\.dvi', '\.fdb_latexm
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 nnoremap <silent> <leader>b :NERDTreeFind<cr>
 
+" Tagbar
+nnoremap <silent> <leader>m :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+
 set foldlevelstart=20
+
+" vim-autoformat
+let g:formatprg_haskell = "hindent"
+let g:formatprg_args_haskell = "--style johan-tibell"
