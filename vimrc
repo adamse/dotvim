@@ -70,6 +70,9 @@ autocmd BufEnter *.page set ft=pandoc
 " .st is gitit templates
 autocmd BufEnter *.st set ft=html
 
+" .nix is nix
+autocmd BufEnter *.nix set ft=nix
+
 " 'c' commands place an $ at end of text
 set cpoptions=Bces$
 
