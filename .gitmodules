@@ -55,3 +55,12 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule "bundle/nix"]
+	path = bundle/nix
+	url = https://github.com/MarcWeber/vim-addon-nix.git
+[submodule "bundle/vim-addon-nix"]
+	path = bundle/vim-addon-nix
+	url = https://github.com/MarcWeber/vim-addon-nix.git
+[submodule "bundle/haskellFold"]
+	path = bundle/haskellFold
+	url = https://github.com/Twinside/vim-haskellFold.git
