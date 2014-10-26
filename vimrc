@@ -212,6 +212,8 @@ let NERDTreeIgnore=['\.class', '\.fls', '\.aux', '\.pdf', '\.dvi', '\.fdb_latexm
 nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 nnoremap <silent> <leader>b :NERDTreeFind<cr>
 
+let NERD_haskell_alt_style=1
+
 " Tagbar
 nnoremap <silent> <leader>m :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
