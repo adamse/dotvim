@@ -64,3 +64,6 @@
 [submodule "bundle/haskellFold"]
 	path = bundle/haskellFold
 	url = https://github.com/Twinside/vim-haskellFold.git
+[submodule "bundle/haskell-vim"]
+	path = bundle/haskell-vim
+	url = https://github.com/raichoo/haskell-vim.git
