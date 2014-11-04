@@ -67,3 +67,7 @@
 [submodule "bundle/haskell-vim"]
 	path = bundle/haskell-vim
 	url = https://github.com/raichoo/haskell-vim.git
+[submodule "bundle/YouCompleteMe"]
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/emmet-vim"]
+	url = https://github.com/mattn/emmet-vim.git
